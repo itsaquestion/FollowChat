@@ -1,4 +1,5 @@
 output/
+fragments/
 .env
 
 # Python

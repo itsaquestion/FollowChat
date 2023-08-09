@@ -1,0 +1,31 @@
+Jenny:: Aria goes to see Dr. Smith for some health advice. They discuss her situation and make plans for improving her health.
+
+Guy:: Good morning Aria. How are you feeling today?
+
+Aria:: Hi Dr. Smith. I'm feeling really tired all the time. And I've been getting headaches frequently.
+
+Guy:: I see. Have you been sleeping enough hours at night? Lack of sleep can cause fatigue.
+
+Aria:: I try to get 7-8 hours a night. But I often wake up multiple times and have trouble falling back asleep. 
+
+Guy:: Hmm I would suggest trying to improve your sleep habits. Make sure your bedroom is dark, quiet and cool at night. Also avoid screens for 1-2 hours before bedtime.
+
+Aria:: That's good advice. I'll give those things a try. Do you have any other suggestions? I'd like to have more energy during the day.
+
+Guy:: Diet and exercise can also help with fatigue. I would recommend getting 30 mins of exercise daily, even just walking. And eat more fruits, vegetables and whole grains for energy. 
+
+Aria:: Okay, I don't exercise much now but I can start taking short walks. And I'll try to improve my diet by adding more healthy foods.
+
+Guy:: Great, those lifestyle changes should help with your energy levels. Now regarding the headaches, do you drink enough water daily? Dehydration can trigger headaches.
+
+Aria:: I'm not sure - I should probably drink more water. Would 2 liters a day be enough?
+
+Guy:: Yes, aiming for 2 liters of water daily is a good goal. I also suggest limiting caffeine, it can worsen headaches. An over-the-counter painkiller like acetaminophen can help when you feel a headache coming on.
+
+Aria:: Got it, I'll work on increasing my water intake and being careful with caffeine. And keep some acetaminophen on hand for headache relief. Thanks for all the advice Dr. Smith! I feel like I have a good plan now.
+
+Guy:: You're very welcome! Feel free to follow up with me in a few weeks, and let me know how the changes are working for you. I'm happy to help further tweak things if needed.
+
+Aria:: Sounds good, I'll be in touch! Have a nice day!
+
+Guy:: Take care, bye!

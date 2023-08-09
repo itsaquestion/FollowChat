@@ -40,7 +40,7 @@ def process_chat(chat_content):
     return "\n".join(processed_lines)
 
 
-def script2wav(script_file,output_dir):
+def script2wav(script_file,output_dir='fragments'):
     """把原始对话文本，首先重新断句，然后转化音频文件，按顺序命名为001.wav,002.wav
 
     Args:
@@ -55,19 +55,21 @@ def script2wav(script_file,output_dir):
     # 如果output文件夹存在，则删除
     if os.path.exists(output_dir):
         print(f'{output_dir}目录存在，删除')
-        shutil.rmtree('output')
+        shutil.rmtree(output_dir)
 
     # 创建新的output文件夹
-    os.mkdir('output')
+    os.mkdir(output_dir)
 
     counter = 0
     for chat in processed_chat_content.split('\n'):
         counter += 1
         print(counter)
+        if not '::' in chat:
+            continue
         speaker, text = [x.strip() for x in chat.split('::')]
         tts2file(text,speaker,output_dir + '/'+'{:0>3}'.format(counter) + '.wav')
 
 # %%
 
 if __name__ == "__main__":
-    script2wav('chat_sample.txt','output')
+    script2wav('chat_sample.txt')

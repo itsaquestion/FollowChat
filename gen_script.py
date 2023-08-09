@@ -24,9 +24,10 @@ user_msg = """
 6. 其他：模拟日常对话，因此可以适当跑题。对话生成名字在前，接两个冒号::，不要有引号。不要使用代码生成器，你直接生成对话。
 7. 格式: 第一话是Jenny进行旁白，用1、2句话说出这次对话的大致内容。后面是对话角色的对话。避免第三人出现，但假如有第三人出现，由Jenny充当，同样是Jenny名字后加入::。
 
-请你按如下步骤输出内容。：
-step 1. 总结我的上述要求设计，重点是雅思6-7分水平，要有一些语法结构，大约15段。显示总结。
-step 2. 使用####作为分隔符，然后按要求输出你设计好的对话。对话后不要加入任何内容，使得我用####切分后，最后一部分就是单纯的对话。
+请你按如下步骤输出内容，全部采用英语：
+step 1. 总结对话内容的要求。
+step 2. 总结对话文本的要求。
+step 3. 使用####作为分隔符，然后按要求输出你设计好的对话。对话后不要加入任何内容，使得我用####切分后，最后一部分就是单纯的对话。
 """
 
 def find_string_with_most_colons(strings):
@@ -64,7 +65,7 @@ def gen_script(chat_theme, system_msg, user_msg):
     return(find_string_with_most_colons(full_message.split("####")))
 
 if __name__ == "__main__":
-    result = gen_script('地点：咖啡店，主题：订单；对话类型：投诉',system_msg,user_msg)
+    result = gen_script('地点：咖啡店，主题：订单；对话类型：解释',system_msg,user_msg)
     print(result)
 
 
