@@ -10,7 +10,7 @@ speech_config = speechsdk.SpeechConfig(subscription=os.environ.get('SPEECH_KEY')
 
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=None)
 
-def tts2file(text, speaker, file_path, style = 'excited', style_degree='0.3', debug = False):
+def tts2file(text, speaker, file_path, style = 'chat', style_degree='0.3', debug = False):
     """字符转为语音文件
 
     Args:
