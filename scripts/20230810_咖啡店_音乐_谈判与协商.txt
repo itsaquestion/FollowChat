@@ -1,0 +1,27 @@
+Jenny:: Guy and Aria meet at a coffee shop and get into a debate about their favorite music styles.
+
+Guy:: Hi Aria! Fancy seeing you here. How's your day going?
+
+Aria:: Pretty good, thanks. Just grabbing a coffee before class. How about you? Doing anything fun tonight?
+
+Guy:: Not really, just meeting some friends later. Hey, did you hear the new album from Ed Sheeran? It's brilliant in my opinion.
+
+Aria:: Ah, can't say I'm a huge fan of his music. It's a bit too pop and radio-friendly for me. I prefer stuff with more edge, like indie rock or alternative bands. 
+
+Guy:: Really? I find Ed's songwriting incredible though. He pours so much emotion into his lyrics. I can really relate to them.
+
+Aria:: I get that his songs resonate with people, but for me they just feel a bit saccharine and manufactured at times. I like music that feels raw and authentic, you know? 
+
+Guy:: Sure, I can appreciate that. But give Ed's new album a chance. I think you'll find it has some really poetic moments. What kind of indie bands do you like anyway?
+
+Aria:: Cool you're open to it! I'm into groups like Arcade Fire, The National, Bon Iver. I like the experimental sounds and meaningful lyrics. Do you listen to much indie music?
+
+Guy:: I enjoy some indie bands, but find a lot of them too pretentious and obscure for my taste. At the end of the day, music has to make you feel something powerful. That's what I get from Ed Sheeran.
+
+Aria:: You have a point. I can get caught up in obscure bands too. But a great lyric or unexpected chord change can hit me hard too. Maybe we can exchange playlists sometime, get a taste of each other's style!
+
+Guy:: For sure! I'd love to broaden my musical horizons. And who knows, maybe you'll gain an appreciation for Ed after all!
+
+Aria:: It's a deal! Catch you later, I've got class. This was fun, we should chat more about music sometime. Enjoy your evening!
+
+Guy:: Sounds good, see you around!

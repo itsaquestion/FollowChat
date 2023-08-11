@@ -1,0 +1,25 @@
+Jenny:: Guy and Aria are having a discussion about a new product launch at the supermarket.
+
+Guy:: Hi Aria! Have you seen the new organic juice on sale here? It's from a really great new brand.
+
+Aria:: Oh really? I haven't noticed it yet. Tell me more about it!
+
+Guy:: Yeah, it's called Nature's Best or something like that. They use all natural ingredients and no preservatives. And it's on sale this week only for $2.99. 
+
+Aria:: Hmm, that does sound pretty good. I love trying new health juices. Is it tasty? What flavors do they have?
+
+Guy:: They've got orange, apple, and carrot flavors. I tried the orange and it was delicious! Sweet but also fresh and light. You should grab a bottle before the sale ends.
+
+Aria:: Okay, you've convinced me! I'll go take a look and probably buy some. Getting natural juice at that price is a great deal. 
+
+Guy:: For sure. I'm going to stock up while it's on sale. Hope you enjoy it!
+
+Aria:: Thanks for the recommendation. It's always good to get a personal review before trying something new. 
+
+Guy:: No problem! I'm happy to share good deals on healthy stuff. Gotta save money and eat well.
+
+Aria:: Definitely. Well, I better go grab some before they sell out. Enjoy the rest of your shopping!
+
+Guy:: You too, Aria! See you later.
+
+Aria:: See ya!
