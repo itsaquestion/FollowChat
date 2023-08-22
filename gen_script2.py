@@ -1,4 +1,4 @@
-# %%
+
 import re
 import os
 from dotenv import load_dotenv
@@ -12,8 +12,6 @@ load_dotenv()
 openai.api_key = os.environ["OR_KEY"]
 openai.api_base = "https://openrouter.ai/api/v1"
 
-# %%
-
 
 def gen(system_msg, user_msg, model="anthropic/claude-2"):
     response = openai.ChatCompletion.create(model=model,
@@ -25,7 +23,8 @@ def gen(system_msg, user_msg, model="anthropic/claude-2"):
                                             stream=True, temperature=0.9)
     collected_messages = []
     for chunk in response:
-        content = chunk["choices"][0].get("delta", {}).get("content") # type: ignore
+        content = chunk["choices"][0].get(  # type: ignore
+            "delta", {}).get("content")  # type: ignore
         if content is not None:
             collected_messages.append(content)
             print(content, end='', flush=True)
@@ -34,20 +33,18 @@ def gen(system_msg, user_msg, model="anthropic/claude-2"):
 
     return full_message
 
-# %%
-
 
 system_msg = "请你成为我的英语老师，帮我进行英语对话的练习，以及对话练习脚本的设计。"
 
 
 def choose_context():
+    """选择场景"""
     # 场景 (Context)
     contexts = ["In a café", "At the office", "In the library", "At home", "In a supermarket",
                 "At the gym", "In a cinema", "At the hospital", "In a park", "At the station"]
     return random.choice(contexts)
 
 
-# %%
 def choose_relation(context):
     """选择relation"""
     user_msg = replace_placeholders(
@@ -64,8 +61,6 @@ def choose_relation(context):
     return relation
 
 
-# %%
-
 def choose_topic(context, relation):
     """选择topic"""
     user_msg = replace_placeholders(
@@ -80,11 +75,9 @@ def choose_topic(context, relation):
 
     return topic
 
-# %%
-
 
 def choose_purpose(context, relation, topic):
-
+    """选择谈话目标"""
     purposes = ["Gathering information", "Making a connection", "Solving a problem", "Entertainment",
                 "Persuasion", "Purchasing", "Asking for directions", "Ordering food", "Expressing gratitude",
                 "Complaining or giving feedback"]
@@ -102,11 +95,8 @@ def choose_purpose(context, relation, topic):
     return topic
 
 
-# %%
-
-
 def gen_script(chat_theme, system_msg):
-
+    """从主题生成对话脚本"""
     user_msg = replace_placeholders(
         'prompts/gen_script.txt', {'chat_theme': chat_theme})
 
@@ -117,10 +107,8 @@ def gen_script(chat_theme, system_msg):
     return (extract_lines_with_pattern(find_string_with_most_colons(full_message.split("####"))))
 
 
-# %%
-
-
-def main():
+def gen_chat_script():
+    """随机选择主题、关系、话题和对话目标，最后生成对话脚本"""
     context = choose_context()
     print(f"\n选择的context是：{context}")
     relation = choose_relation(context)
@@ -141,4 +129,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    gen_chat_script()
