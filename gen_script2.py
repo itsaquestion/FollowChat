@@ -1,4 +1,4 @@
-
+"""generate chat script"""
 import re
 import os
 from dotenv import load_dotenv
@@ -126,7 +126,12 @@ def gen_chat_script():
     script = gen_script(chat_theme, system_msg)
     print("\n最终脚本：")
     print(script)
+    
+    return {'title': f'{context} on {topic}',
+            'script': script}
 
 
 if __name__ == "__main__":
-    gen_chat_script()
+    result = gen_chat_script()
+    print()
+    print(result)
