@@ -1,37 +1,10 @@
 """generate chat script"""
 import re
 import os
-from dotenv import load_dotenv
 import random
 import openai
 from utils import *
 import ast
-
-load_dotenv()
-
-openai.api_key = os.environ["OR_KEY"]
-openai.api_base = "https://openrouter.ai/api/v1"
-
-
-def gen(system_msg, user_msg, model="anthropic/claude-2"):
-    response = openai.ChatCompletion.create(model=model,
-                                            messages=[{"role": "system", "content": system_msg},
-                                                      {"role": "user", "content": user_msg}],
-                                            headers={"HTTP-Referer": 'https://py4ss.net',  # To identify your app
-                                                     "X-Title": 'followchat'},
-                                            max_tokens=2048,
-                                            stream=True, temperature=0.9)
-    collected_messages = []
-    for chunk in response:
-        content = chunk["choices"][0].get(  # type: ignore
-            "delta", {}).get("content")  # type: ignore
-        if content is not None:
-            collected_messages.append(content)
-            print(content, end='', flush=True)
-
-    full_message = ''.join(collected_messages)
-
-    return full_message
 
 
 system_msg = "请你成为我的英语老师，帮我进行英语对话的练习，以及对话练习脚本的设计。"
@@ -98,7 +71,7 @@ def choose_purpose(context, relation, topic):
 def gen_script(chat_theme, system_msg):
     """从主题生成对话脚本"""
     user_msg = replace_placeholders(
-        'prompts/gen_script.txt', {'chat_theme': chat_theme})
+        'prompts/gen_chat_script.txt', {'chat_theme': chat_theme})
 
     # print(user_msg)
 
@@ -126,7 +99,7 @@ def gen_chat_script():
     script = gen_script(chat_theme, system_msg)
     print("\n最终脚本：")
     print(script)
-    
+
     return (f'{context} on {topic}', script)
 
 

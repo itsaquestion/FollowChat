@@ -1,6 +1,7 @@
 output/
 fragments/
 .env
+.pytest_cache/
 
 # Python
 *.pyc

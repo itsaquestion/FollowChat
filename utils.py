@@ -6,6 +6,36 @@
 """
 import re
 import random
+import os
+import openai
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+openai.api_key = os.environ["OR_KEY"]
+openai.api_base = "https://openrouter.ai/api/v1"
+
+
+def gen(system_msg, user_msg, model="anthropic/claude-2"):
+    response = openai.ChatCompletion.create(model=model,
+                                            messages=[{"role": "system", "content": system_msg},
+                                                      {"role": "user", "content": user_msg}],
+                                            headers={"HTTP-Referer": 'https://py4ss.net',  # To identify your app
+                                                     "X-Title": 'followchat'},
+                                            max_tokens=2048,
+                                            stream=True, temperature=0.9)
+    collected_messages = []
+    for chunk in response:
+        content = chunk["choices"][0].get(  # type: ignore
+            "delta", {}).get("content")  # type: ignore
+        if content is not None:
+            collected_messages.append(content)
+            print(content, end='', flush=True)
+
+    full_message = ''.join(collected_messages)
+
+    return full_message
 
 
 def replace_placeholders(file_path, replacements):

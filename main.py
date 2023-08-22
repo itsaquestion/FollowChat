@@ -37,9 +37,9 @@ def gen_chat_mp3():
 
 
 if __name__ == "__main__":
-    # for i in range(3):
-    #     print(f'生成{i}')
-    #     gen_chat_mp3()
+    for i in range(3):
+        print(f'生成{i}')
+        gen_chat_mp3()
 
     print('合并同一天的')
     merge_mp3_files_in_directory('output')
