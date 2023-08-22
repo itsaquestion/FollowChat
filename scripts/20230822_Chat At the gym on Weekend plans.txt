@@ -1,0 +1,21 @@
+Jenny:: Guy strikes up a conversation with Aria at the gym about their plans for the weekend.
+
+Guy:: Hi there! Getting in a workout before the weekend?
+
+Aria:: Yeah, trying to get it in before I'm busy all weekend. What about you? Any fun plans?
+
+Guy:: I'm hoping to play some pickup basketball if the weather holds up. Do you play any sports?
+
+Aria:: Not really, but I do enjoy swimming when I get the chance. It's a great full body workout. 
+
+Guy:: For sure! I should incorporate more swimming into my routine. Do you swim laps or is it more recreational?
+
+Aria:: Usually just recreational at the pool or beach. It's a nice way to unwind. What kind of basketball do you normally play? Competitive or just for fun?
+
+Guy:: Mostly just casual games with friends, but I like the competition too. Gets me motivated to improve my skills.
+
+Aria:: That's great you have a group to play with regularly. Team sports can be really rewarding. 
+
+Guy:: Definitely! It's a good social activity too. Well, have a great weekend! Enjoy your swim session.
+
+Aria:: Thanks, you too! Have fun with basketball if you get a game together.

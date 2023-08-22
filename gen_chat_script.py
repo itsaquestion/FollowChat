@@ -100,7 +100,7 @@ def gen_script(chat_theme, system_msg):
     user_msg = replace_placeholders(
         'prompts/gen_script.txt', {'chat_theme': chat_theme})
 
-    print(user_msg)
+    # print(user_msg)
 
     full_message = gen(system_msg, user_msg, model="anthropic/claude-2")
 
@@ -127,8 +127,7 @@ def gen_chat_script():
     print("\n最终脚本：")
     print(script)
     
-    return {'title': f'{context} on {topic}',
-            'script': script}
+    return (f'{context} on {topic}', script)
 
 
 if __name__ == "__main__":

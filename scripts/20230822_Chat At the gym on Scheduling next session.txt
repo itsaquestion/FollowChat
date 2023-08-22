@@ -1,0 +1,25 @@
+Jenny:: Guy the personal trainer meets his client Aria at the gym to schedule her next session and give her some fitness tips.
+
+Guy:: Hi Aria! Good to see you. Shall we schedule our next training session?
+
+Aria:: Hi Guy. Yes let's do that. I'm free next Tuesday at 5pm if that works? 
+
+Guy:: Tuesday at 5pm is perfect. That gives us two days to recover before the next session. 
+
+Aria:: Great. My legs are still sore from those lunges you had me doing! 
+
+Guy:: Haha yes those lunges really work the muscles! Make sure you stretch thoroughly after our workouts.
+
+Aria:: Will do. What should I focus on at home before our next session? 
+
+Guy:: Definitely keep up with cardio. I suggest 30 mins of swimming or cycling three times this week. And do core exercises like planks daily. 
+
+Aria:: Got it, cardio and core. Anything else I should keep in mind?
+
+Guy:: Hydrate well and get plenty of protein to rebuild your muscles. And listen to your body - don't overdo it! 
+
+Aria:: Good tips thanks! See you next Tuesday at 5 then. Looking forward to it!
+
+Guy:: Sounds great Aria. Have a good week and take care!
+
+Aria:: You too Guy!
