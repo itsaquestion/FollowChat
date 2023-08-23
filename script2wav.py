@@ -47,7 +47,7 @@ def script2wav(script_file,output_dir='fragments'):
         script_file (str): 对话脚本文件，如'chat.txt'
         output_dir (_type_): 输出wav文件的目录
     """
-    with open(script_file, "r", encoding="utf-8") as file:
+    with open(script_file, "r") as file:
         chat_content = file.read()
     
     processed_chat_content = process_chat(chat_content)

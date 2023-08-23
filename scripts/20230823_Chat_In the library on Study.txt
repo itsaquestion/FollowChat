@@ -1,0 +1,33 @@
+Jenny:: Guy and Aria are studying in the library. They start chatting about their classes and hobbies. 
+
+Guy:: Hey Aria! Fancy seeing you here. What are you working on?
+
+Aria:: Oh hi Guy! Just reviewing for our history exam next week. How about you?
+
+Guy:: Ugh, history. Not my best subject. I'm working on an essay for English class. 
+
+Aria:: English is so much more interesting than history! What's your essay about?
+
+Guy:: It's about analyzing a novel we read in class. I'm really struggling with interpreting the symbolism though.
+
+Aria:: Symbolism can be tricky. I took a literature class last semester that really helped me with that. Maybe I could give you some tips?
+
+Guy:: That would be amazing! I'd really appreciate your help. What do you like to do for fun outside of school?
+
+Aria:: Well I really enjoy reading, as you can probably tell! It's my main hobby. How about you? 
+
+Guy:: I'm really into sports - I play on our school's football team. It's a lot of fun and a good way to stay active.
+
+Aria:: That's awesome! I wish I were more athletic. I always get picked last for teams in gym class.
+
+Guy:: I could teach you some football basics sometime if you want! It just takes practice.
+
+Aria:: I'd love that! It would be nice to pick up a new hobby. We should exchange numbers so we can meet up.
+
+Guy:: For sure! I'd be happy to help you out. Here, let me get your number.
+
+Aria:: Sounds good! I really appreciate you offering to teach me. This was a nice chat - we should hang out more often!
+
+Guy:: Definitely! It was great talking. See you around, Aria!
+
+Aria:: See ya, Guy!
