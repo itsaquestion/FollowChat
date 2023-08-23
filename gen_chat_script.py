@@ -9,12 +9,16 @@ import ast
 
 system_msg = "请你成为我的英语老师，帮我进行英语对话的练习，以及对话练习脚本的设计。"
 
+import time
 
+    
 def choose_context():
     """选择场景"""
     # 场景 (Context)
     contexts = ["In a café", "At the office", "In the library", "At home", "In a supermarket",
                 "At the gym", "In a cinema", "At the hospital", "In a park", "At the station"]
+                
+    random.seed(time.time())
     return random.choice(contexts)
 
 
@@ -24,7 +28,7 @@ def choose_relation(context):
         'prompts/choose_relation.txt', {'context': context})
 
     # print(user_msg)
-    result = gen(system_msg, user_msg)
+    result = gen_c2(system_msg, user_msg)
 
     relation_dict = ast.literal_eval(
         extract_bracket_contents(result.rsplit("####", maxsplit=1)[-1]))
@@ -39,7 +43,7 @@ def choose_topic(context, relation):
     user_msg = replace_placeholders(
         'prompts/choose_topic.txt', {'context': context, 'relation': relation})
     # print(user_msg)
-    result = gen(system_msg, user_msg)
+    result = gen_c2(system_msg, user_msg)
 
     topic_dict = ast.literal_eval(extract_bracket_contents(
         result.rsplit("####", maxsplit=1)[-1]))
@@ -58,7 +62,7 @@ def choose_purpose(context, relation, topic):
     user_msg = replace_placeholders(
         'prompts/choose_topic.txt', {'context': context, 'relation': relation, 'purposes': purposes})
     # print(user_msg)
-    result = gen(system_msg, user_msg)
+    result = gen_c2(system_msg, user_msg)
 
     topic_dict = ast.literal_eval(extract_bracket_contents(
         result.rsplit("####", maxsplit=1)[-1]))
@@ -75,7 +79,7 @@ def gen_script(chat_theme, system_msg):
 
     # print(user_msg)
 
-    full_message = gen(system_msg, user_msg, model="anthropic/claude-2")
+    full_message = gen_c2(system_msg, user_msg)
 
     return (extract_lines_with_pattern(find_string_with_most_colons(full_message.split("####"))))
 
@@ -107,3 +111,4 @@ if __name__ == "__main__":
     result = gen_chat_script()
     print()
     print(result)
+

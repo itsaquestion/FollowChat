@@ -66,7 +66,7 @@ def script2wav(script_file,output_dir='fragments'):
         print(counter)
         if not '::' in chat:
             continue
-        speaker, text = [x.strip() for x in chat.split('::')]
+        speaker, text = [x.strip() for x in chat.split('::')][:2]
         tts2file(text,speaker,output_dir + '/'+'{:0>3}'.format(counter) + '.wav')
 
 # %%

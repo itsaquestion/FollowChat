@@ -9,7 +9,7 @@ import random
 import os
 import openai
 from dotenv import load_dotenv
-
+import functools
 
 load_dotenv()
 
@@ -17,7 +17,7 @@ openai.api_key = os.environ["OR_KEY"]
 openai.api_base = "https://openrouter.ai/api/v1"
 
 
-def gen(system_msg, user_msg, model="anthropic/claude-2"):
+def gen(system_msg, user_msg, model):
     response = openai.ChatCompletion.create(model=model,
                                             messages=[{"role": "system", "content": system_msg},
                                                       {"role": "user", "content": user_msg}],
@@ -36,6 +36,9 @@ def gen(system_msg, user_msg, model="anthropic/claude-2"):
     full_message = ''.join(collected_messages)
 
     return full_message
+
+gen_g4 = functools.partial(gen,model='openai/gpt-4')
+gen_c2 = functools.partial(gen,model='anthropic/claude-2')
 
 
 def replace_placeholders(file_path, replacements):
