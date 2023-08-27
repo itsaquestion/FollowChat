@@ -5,7 +5,8 @@ from pydub import AudioSegment
 
 def merge_mp3_files_in_directory(directory_path):
 
-    all_files = [f for f in os.listdir(directory_path) if f.endswith('.mp3')]
+    all_files = [f for f in os.listdir(directory_path) if f.endswith(
+        '.mp3') and ("Chat_" in f or "Disc_" in f)]
 
     # 2. 使用日期创建一个字典
     files_by_date = {}
@@ -18,7 +19,7 @@ def merge_mp3_files_in_directory(directory_path):
     # 3. 合并同一天的所有MP3文件
     for date_type, files in files_by_date.items():
         output_path = os.path.join(directory_path, f"{date_type}.mp3")
-
+        print(f'{output_path=}')
         # 如果输出文件已经存在，跳过
         if os.path.exists(output_path):
             print(f"{date_type}.mp3已经存在，跳过")
