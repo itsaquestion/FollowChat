@@ -30,10 +30,10 @@ user_msg = """
 格式要求：
 1: 对话角色: 男性Guy。女性Aria。旁白角色:女性Jenny。
 2: 对话难度：雅思6-7分水平，具有一定的英语语法，如时态，语态，从句等等，便于我练习。
-3: 对话生成名字在前，接两个冒号::，不要有引号，如Guy:: Hello!
+3: 对话生成名字在前，接一个冒号:，不要有引号，如Guy: Hello!
 
 内容要求：
-1: Summary。Jenny首先总结对话的大致内容，同样以'Jenny::'开头
+1: Summary。Jenny首先总结对话的大致内容，同样以'Jenny:'开头
 2: Introduction or Description。其中一位角色进行一段介绍或者陈述，200单词，风格偏向正式的口语。重点在于要选择具体的对象，例如在"建筑与地标"类别，可以选择介绍世界上某一栋著名的建筑或者地标。但是你现在要在“{topic}”这个类别中，选择一个具体的对象。
 3: Discussion and chat。然后，另一位角色对上述介绍的内容展开对话。5段对话，每段对话不要过15个单词，可以是问题，或者陈述其他观点等等。
 
@@ -47,15 +47,15 @@ Example：
 Title: <title's here>
 
 ####
-Jenny:: <What are they talking about.>
+Jenny: <What are they talking about.>
 
-Guy:: <200 words introduction or description>
+Guy: <200 words introduction or description>
 
-Aria:: <chat>
+Aria: <chat>
 
-Guy:: <chat>
+Guy: <chat>
 
-Aria:: <chat>
+Aria: <chat>
 
 <chat goes on, 5 exchanges total>
 """

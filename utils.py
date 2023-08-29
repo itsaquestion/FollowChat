@@ -94,7 +94,7 @@ def find_string_with_most_colons(strings):
     max_colon_string = ""
 
     for string in strings:
-        colon_count = string.count("::")
+        colon_count = string.count(":")
         if colon_count > max_colon_count:
             max_colon_count = colon_count
             max_colon_string = string
@@ -102,7 +102,7 @@ def find_string_with_most_colons(strings):
     return max_colon_string.strip()
 
 
-def extract_lines_with_pattern(text, pattern=r"::"):
+def extract_lines_with_pattern(text, pattern=r":"):
     lines = text.split("\n")
     matches = [line for line in lines if re.search(pattern, line)]
     return '\n\n'.join(matches).strip()
