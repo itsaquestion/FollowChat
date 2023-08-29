@@ -1,0 +1,19 @@
+Jenny:: Guy and Aria discuss their upcoming trips while working out at the gym. Aria is going on a relaxing beach vacation while Guy has a work trip. 
+
+Guy:: Hey Aria! Fancy seeing you here on a Saturday. Don't you usually come on weekdays?
+
+Aria:: Hi Guy! Yes, I had to switch up my schedule this week. What about you? Getting in a weekend workout? 
+
+Guy:: Yep, trying to get some exercise before my work trip next week. I'm headed to Chicago for a few days. 
+
+Aria:: Oh nice, Chicago is a great city. Will you have any free time while you're there?
+
+Guy:: Unfortunately no, it's a packed schedule of meetings and events. I'll be lucky to have time to sleep! What about you, any exciting plans coming up?
+
+Aria:: I'm headed to Hawaii next month for a vacation! I got a great deal on airfare so I couldn't pass it up. I can't wait to lounge on the beach and do nothing for a week. 
+
+Guy:: Wow, that sounds incredible! I'm jealous. My work trip will probably be the opposite of relaxing. Have fun in Hawaii!
+
+Aria:: Thanks! I'm sure your Chicago trip will be productive. We should meet up again afterwards and compare notes. Gotta run, my spin class starts soon!
+
+Guy:: For sure, enjoy your class! I'll see you next week.

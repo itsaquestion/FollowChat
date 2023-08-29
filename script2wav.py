@@ -9,7 +9,7 @@ import os
 def split_sentence(text):
     """Split the given text into sentences."""
     # Using regex to split sentences by ., !, and ?
-    sentences = re.split(r'(?<=[.!?]) +', text)
+    sentences = re.split(r'(?<=[,.!?]) +', text)
     return sentences
 
 def process_chat(chat_content):
@@ -26,7 +26,7 @@ def process_chat(chat_content):
         
         for sent in sentences:
             # Check for short sentences
-            if len(sent.split()) <= 2 and buffer_sentence == "":
+            if len(sent.split()) <= 3 and buffer_sentence == "":
                 buffer_sentence = sent
                 continue
             

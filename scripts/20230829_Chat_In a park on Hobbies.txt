@@ -1,0 +1,25 @@
+Jenny:: Guy and Aria meet at a park. They start chatting about their hobbies and find they have a common interest in sports.
+
+Guy:: What a nice day to be out walking in the park! Do you come here often?
+
+Aria:: I try to get out a few times a week if I can. With work and everything it can be hard to find the time though. Are you a regular here?
+
+Guy:: Yeah, I live just down the street so I'm here most mornings to go for a jog or walk my dog. It's a great way to get some exercise and fresh air. 
+
+Aria:: That's awesome. I should really try to be more active too. I used to play team sports in high school but not so much anymore.
+
+Guy:: Oh yeah? What sports did you play? I played basketball and football back in school. These days I just run and lift weights to stay in shape. 
+
+Aria:: I did track and field and was on the volleyball team. I really miss that social aspect of sports, being part of a team. It motivated me to work out more.
+
+Guy:: I hear you. Playing team sports is great for motivation and camaraderie. Hey, have you checked out the rec leagues in the area? They have different sports like softball, soccer, even dodgeball. 
+
+Aria:: No I haven't looked into that yet. That could be really fun! I'd love to find a volleyball team or maybe take up something new like kickball.
+
+Guy:: For sure! You should check it out. I play in the soccer league and it's a blast. Let me know if you want any info on joining. I'm Guy by the way.
+
+Aria:: Nice to meet you Guy, I'm Aria. And thanks, I'll definitely look into the rec leagues. Great chatting with you!
+
+Guy:: You too Aria! Enjoy the rest of your walk.
+
+Aria:: Thanks, you as well! See you around!

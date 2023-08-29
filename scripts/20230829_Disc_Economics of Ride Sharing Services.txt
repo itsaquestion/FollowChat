@@ -1,0 +1,7 @@
+Jenny:: Guy and Aria discuss the economics behind ride sharing services like Uber and Lyft.
+
+Guy:: Ride sharing services like Uber and Lyft have rapidly grown in popularity over the last decade. They provide an alternative to traditional taxi services by allowing drivers to connect with riders directly through a mobile app. Economically, ride sharing brings both benefits and drawbacks. On the one hand, it increases competition in the market, which can drive down prices for consumers. The flexible work opportunities also allow more people to earn income as drivers. However, there are concerns about driver wages and benefits. Most drivers are considered independent contractors without employment protections. The long-term profitability of ride sharing companies is also uncertain. Ultimately, ride sharing is disrupting established transportation models - whether this disruption will be positive or negative remains to be seen.
+
+Aria:: That's a great overview of the key economic issues. I agree the effects seem somewhat mixed so far. What do you think about how ride sharing is impacting congestion and emissions in cities?
+
+Guy:: That's a good point. Ride sharing does seem to be increasing traffic congestion as it adds more vehicles to the road. The environmental impacts are debatable though. Shared rides can reduce emissions per passenger mile compared to private car usage. But empty miles between passenger pickups offset these gains. More data is probably needed to determine the net effects. What are your thoughts on the labor issues for drivers?
