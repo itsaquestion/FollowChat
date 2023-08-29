@@ -5,6 +5,8 @@ import re
 from tts2file import tts2file
 import shutil
 import os
+from split_paragraph import split_paragraph
+
 
 def split_sentence(text):
     """Split the given text into sentences."""
@@ -12,35 +14,32 @@ def split_sentence(text):
     sentences = re.split(r'(?<=[.!?]) +', text)
     return sentences
 
+
 def process_chat(chat_content):
     processed_lines = []
     lines = chat_content.split("\n")
-    
+
     buffer_sentence = ""  # Buffer to hold short sentences
     for line in lines:
         if line.strip() == "":
             continue
-        
+
         name, sentence = line.split(": ", 1)
-        sentences = split_sentence(sentence)
-        
+        sentences = split_paragraph(sentence)
+
         for sent in sentences:
-            # Check for short sentences
-            if len(sent.split()) <= 2 and buffer_sentence == "":
-                buffer_sentence = sent
-                continue
-            
             # If there is a sentence in buffer
-            if buffer_sentence:
-                processed_lines.append(f"{name}: {buffer_sentence} {sent}")
-                buffer_sentence = ""
-            else:
-                processed_lines.append(f"{name}: {sent}")
-    
+            if sent.strip() != '':
+                if buffer_sentence:
+                    processed_lines.append(f"{name}: {buffer_sentence} {sent}")
+                    buffer_sentence = ""
+                else:
+                    processed_lines.append(f"{name}: {sent}")
+
     return "\n".join(processed_lines)
 
 
-def script2wav(script_file,output_dir='fragments'):
+def script2wav(script_file, output_dir='fragments'):
     """把原始对话文本，首先重新断句，然后转化音频文件，按顺序命名为001.wav,002.wav
 
     Args:
@@ -49,7 +48,7 @@ def script2wav(script_file,output_dir='fragments'):
     """
     with open(script_file, "r") as file:
         chat_content = file.read()
-    
+
     processed_chat_content = process_chat(chat_content)
 
     # 如果output文件夹存在，则删除
@@ -67,9 +66,17 @@ def script2wav(script_file,output_dir='fragments'):
         if not ':' in chat:
             continue
         speaker, text = [x.strip() for x in chat.split(':')][:2]
-        tts2file(text,speaker,output_dir + '/'+'{:0>3}'.format(counter) + '.wav')
+        tts2file(text, speaker, output_dir + '/' +
+                 '{:0>3}'.format(counter) + '.wav')
 
 # %%
 
+
 if __name__ == "__main__":
-    script2wav('chat_sample.txt')
+    #script2wav('chat_sample.txt')
+    
+    with open('scripts/20230829_Chat_In a café on Work.txt', "r") as file:
+        chat_content = file.read()
+    
+    print(process_chat(chat_content))
+
