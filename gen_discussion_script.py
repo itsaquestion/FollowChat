@@ -29,7 +29,7 @@ user_msg = """
 
 格式要求：
 1: 对话角色: 男性Guy。女性Aria。旁白角色:女性Jenny。
-2: 对话难度：雅思6-7分水平，具有一定的英语语法，如时态，语态，从句等等，便于我练习。
+2: 对话难度：CEFR B1的水平，具有一定的英语语法，如时态，语态，从句等等，便于我练习。
 3: 对话生成名字在前，接一个冒号:，不要有引号，如Guy: Hello!
 
 内容要求：
@@ -47,6 +47,8 @@ Example：
 Title: <title's here>
 
 ####
+<The flowing is a CEFR B1 level dialogue script>
+
 Jenny: <What are they talking about.>
 
 Guy: <200 words introduction or description>

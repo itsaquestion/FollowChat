@@ -1,0 +1,21 @@
+Jenny: Guy is signing up for a gym membership with Aria, the gym staff member. They discuss the gym facilities and equipment.
+
+Guy: Hi Aria, I'm interested in getting a membership here. What does the gym offer?
+
+Aria: Hi Guy! We've got a full range of cardio and weight machines, plus classes like yoga, spin, and kickboxing. 
+
+Guy: Nice! I'm looking to get back into shape. Are there trainers who can provide guidance?
+
+Aria: For sure. Our trainers can assess your fitness level and goals, and design a customized program.
+
+Guy: That would be really helpful. I'd like to learn how to use the equipment properly. 
+
+Aria: No problem! I can set you up with a trainer when you come in for your first workout. Let me tell you about our membership options...
+
+Guy: Sounds good. I'd like to sign up for the 1 year membership then. This place has everything I need.
+
+Aria: Wonderful, I'll get your membership set up. The lockers and showers are over there. Let me know if you need anything else!
+
+Guy: Will do, thanks Aria! I'm excited to start working out here.
+
+Aria: My pleasure Guy, welcome to the gym!
