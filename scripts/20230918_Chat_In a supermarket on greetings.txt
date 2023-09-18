@@ -1,0 +1,23 @@
+Jenny: Guy goes grocery shopping and has a friendly chat with the shop assistant Aria.
+
+Guy: Good morning! Lovely day today, isn't it?
+
+Aria: Yes, indeed! Welcome to our supermarket. How may I help you today? 
+
+Guy: Oh I'm just browsing for now, but could you tell me where the milk is?
+
+Aria: Of course! The dairy section is just down this aisle on the left side. Let me know if you need any other help!
+
+Guy: Will do, thanks! Wow, I see you have a sale on produce - these avocados look delicious. 
+
+Aria: They're very fresh - we just got them in this morning! Would you like me to weigh you a bag?
+
+Guy: That would be great, thank you. Could I also get half a pound of the cherry tomatoes?
+
+Aria: No problem, I'll package those right up for you! Anything else catching your eye today?
+
+Guy: Hmm, I think that's all for now, but I'll let you know if I find anything else. Thanks for all your help!
+
+Aria: My pleasure! We aim to give our customers the best service. Have a wonderful rest of your day!
+
+Guy: You too - take care!

@@ -50,9 +50,11 @@ def combine_wav(file_name, input_dir, output_dir):
 
         # 创建一个等长的静音段
         silence = AudioSegment.silent(duration=len(audio))
+        
+        silence_1s = AudioSegment.silent()
 
         # 合并音频和静音段
-        segment_to_add = audio + silence + audio + silence 
+        segment_to_add = audio + audio + silence + audio + silence
 
         # 添加到总的音频段
         combined_audio += segment_to_add
