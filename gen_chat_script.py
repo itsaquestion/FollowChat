@@ -7,7 +7,7 @@ from utils import *
 import ast
 
 
-system_msg = "请你成为我的英语老师，帮我进行英语对话的练习，以及对话练习脚本的设计。"
+system_msg = "你的特长是英语教学。请你避免任何客套话，不要尝试和我交流，直接输出我需要的答案。"
 
 import time
 
@@ -28,7 +28,7 @@ def choose_relation(context):
         'prompts/choose_relation.txt', {'context': context})
 
     # print(user_msg)
-    result = gen_c2(system_msg, user_msg)
+    result = gen_g35(system_msg, user_msg)
 
     relation_dict = ast.literal_eval(
         extract_bracket_contents(result.rsplit("####", maxsplit=1)[-1]))
@@ -43,7 +43,7 @@ def choose_topic(context, relation):
     user_msg = replace_placeholders(
         'prompts/choose_topic.txt', {'context': context, 'relation': relation})
     # print(user_msg)
-    result = gen_c2(system_msg, user_msg)
+    result = gen_g35(system_msg, user_msg)
 
     topic_dict = ast.literal_eval(extract_bracket_contents(
         result.rsplit("####", maxsplit=1)[-1]))
@@ -55,19 +55,11 @@ def choose_topic(context, relation):
 
 def choose_purpose(context, relation, topic):
     """选择谈话目标"""
-    purposes = ["Gathering information", "Making a connection", "Solving a problem", "Entertainment",
-                "Persuasion", "Purchasing", "Asking for directions", "Ordering food", "Expressing gratitude",
+    purposes = ["Gathering information", "Solving a problem", "Making a suggestion",
+                "Persuasion", "Expressing gratitude", "Expressing opinions",
                 "Complaining or giving feedback"]
 
-    user_msg = replace_placeholders(
-        'prompts/choose_topic.txt', {'context': context, 'relation': relation, 'purposes': purposes})
-    # print(user_msg)
-    result = gen_c2(system_msg, user_msg)
-
-    topic_dict = ast.literal_eval(extract_bracket_contents(
-        result.rsplit("####", maxsplit=1)[-1]))
-
-    topic = weighted_random_choose(topic_dict)
+    topic = random.choice(purposes)
 
     return topic
 
@@ -100,6 +92,8 @@ def gen_chat_script():
                   'topic': topic,
                   'purpose': purpose}
 
+    print(chat_theme)
+
     script = gen_script(chat_theme, system_msg)
     print("\n最终脚本：")
     print(script)
@@ -111,4 +105,4 @@ if __name__ == "__main__":
     result = gen_chat_script()
     print()
     print(result)
-
+ 

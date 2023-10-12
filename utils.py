@@ -38,6 +38,7 @@ def gen(system_msg, user_msg, model):
     return full_message
 
 gen_g4 = functools.partial(gen,model='openai/gpt-4')
+gen_g35 = functools.partial(gen,model='openai/gpt-3.5-turbo-instruct')
 gen_c2 = functools.partial(gen,model='anthropic/claude-2')
 
 

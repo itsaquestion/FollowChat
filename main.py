@@ -65,11 +65,11 @@ def gen_discussion_mp3():
 
 
 if __name__ == "__main__":
-    for i in range(1):
+    for i in range(3):
         print(f'生成对话{i}')
         gen_chat_mp3()
 
-    for i in range(1):
+    for i in range(2):
         print(f'生成讨论{i}')
         gen_discussion_mp3()
 

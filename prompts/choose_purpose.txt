@@ -6,15 +6,6 @@
 
 备选的谈话目标为： {purposes}。
 
-step 1. 对于场景{context}、人物关系{relation}和话题{topic}，从备选的谈话目标中，列出合理和可能发生的谈话目标。
+step 1. 对于场景{context}、人物关系{relation}和话题{topic}，从备选的谈话目标中，列出合理和可能发生的谈话目标，不超过5种。
 
-step 2. 根据场景{context}、人物关系{relation}和话题{topic}，列出上述谈话目标的可能的概率。概率之和为1，以python字典的格式输出，key为谈话目标，value为概率，概率的格式为0到1的小数。这一步，只输出字典。
-
-范例：
-
-step 2. ####
-{
-"apple": 0.3, 
-"banana": 0.2,
-"orange": 0.5
-}
+step 2. 根据场景{context}、人物关系{relation}和话题{topic}，列出上述谈话目标的可能的概率。概率之和为1，以python字典的格式输出，key为谈话目标，value为概率，概率的格式为0到1的小数。这一步，只输出字典，step 2 output python dict only, English only。
