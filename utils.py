@@ -17,21 +17,21 @@ openai.api_key = os.environ["OR_KEY"]
 openai.api_base = "https://openrouter.ai/api/v1"
 
 
-def gen(system_msg, user_msg, model):
+def gen(system_msg, user_msg, show = True, model='openai/gpt-3.5-turbo-instruct' ):
     response = openai.ChatCompletion.create(model=model,
                                             messages=[{"role": "system", "content": system_msg},
                                                       {"role": "user", "content": user_msg}],
                                             headers={"HTTP-Referer": 'https://py4ss.net',  # To identify your app
                                                      "X-Title": 'followchat'},
-                                            max_tokens=2048,
-                                            stream=True, temperature=0.9)
+                                            max_tokens=4096,
+                                            stream=True, temperature=0.3)
     collected_messages = []
     for chunk in response:
         content = chunk["choices"][0].get(  # type: ignore
             "delta", {}).get("content")  # type: ignore
         if content is not None:
             collected_messages.append(content)
-            print(content, end='', flush=True)
+            if show: print(content, end='', flush=True)
 
     full_message = ''.join(collected_messages)
 
@@ -40,6 +40,7 @@ def gen(system_msg, user_msg, model):
 gen_g4 = functools.partial(gen,model='openai/gpt-4')
 gen_g35 = functools.partial(gen,model='openai/gpt-3.5-turbo-instruct')
 gen_c2 = functools.partial(gen,model='anthropic/claude-2')
+
 
 
 def replace_placeholders(file_path, replacements):
@@ -107,3 +108,19 @@ def extract_lines_with_pattern(text, pattern=r":"):
     lines = text.split("\n")
     matches = [line for line in lines if re.search(pattern, line)]
     return '\n\n'.join(matches).strip()
+
+
+def sanitize_filename(filename):
+    # 替换Windows和Linux中都不允许的字符
+    sanitized = re.sub(r'[\\/:*?"<>|]', '_', filename)
+    
+    # 检查文件名长度
+    if len(sanitized) > 255:
+        raise ValueError("Filename too long")
+    
+    return sanitized
+
+if __name__ == "__main__":
+    gen_g35('','你好！你是谁？')
+    
+    

@@ -6,8 +6,9 @@ from pydub import AudioSegment
 def merge_mp3_files_in_directory(directory_path):
 
     all_files = [f for f in os.listdir(directory_path) if f.endswith(
-        '.mp3') and ("Chat_" in f or "Disc_" in f)]
+        '.mp3') and ("Chat_" in f or "Disc_" in f or "News_" in f)]
 
+    
     # 2. 使用日期创建一个字典
     files_by_date = {}
     for file_name in all_files:

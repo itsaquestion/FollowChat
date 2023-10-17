@@ -4,3 +4,4 @@ pydub
 openai
 ipykernel
 pytest
+bs4
