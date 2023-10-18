@@ -17,9 +17,9 @@ def get_news_from_media(keywords, media):
     googlenews.search(media + ' ' + keywords)
 
     df = pd.DataFrame(googlenews.results())
-
+    
     result = df.query(f'date.str.contains("hours") and media.str.contains("{media}")')[
-        ['date', 'title', 'link']]
+        ['date','datetime','title', 'link']]
 
     return result
 
@@ -30,8 +30,7 @@ get_news_reuters = functools.partial(get_news_from_media, media='Reuters')
 
 get_news_scmp= functools.partial(get_news_from_media, media='South China Morning Post')
 
-
 if __name__ == "__main__":
     #print(get_news_bbc('china news').head())
     #print(get_news_reuters('china news').head())
-    print(get_news_scmp('china news').head())
+    print(get_news_scmp('china news').head().drop('link',axis=1))
