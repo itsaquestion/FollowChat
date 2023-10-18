@@ -1,11 +1,11 @@
 """
-抓取BBC News和Reuters的网页内容
+抓取BBC News,Reuters和南华早报的网页内容
 """
 from bs4 import BeautifulSoup
 import requests
+import functools
 
-
-def get(url):
+def get(url, title_level = 'h1'):
     """
     通过网址，返回BBC News或者Reuters的内容
 
@@ -42,7 +42,7 @@ def get(url):
 
     div_tags = article.find_all('p')
 
-    title = article.find_all('h1')[0].text
+    title = article.find_all(title_level)[0].text
     # 遍历并处理每一个<div>标签
 
     text = ''
@@ -57,6 +57,9 @@ def get(url):
             'content': text}
 
 
+get_bbc = functools.partial(get,title_level = 'h1')
+get_reuters = get_bbc
+get_scmp = functools.partial(get,title_level = 'h2')
+
 if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+    print(get_scmp('https://www.scmp.com/news/china/diplomacy/article/3238360/belt-and-road-forum-china-launches-ai-framework-urging-equal-rights-and-opportunities-all-nations'))
