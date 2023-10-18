@@ -24,7 +24,7 @@ def gen(system_msg, user_msg, show = True, model='openai/gpt-3.5-turbo-instruct'
                                             headers={"HTTP-Referer": 'https://py4ss.net',  # To identify your app
                                                      "X-Title": 'followchat'},
                                             max_tokens=4096,
-                                            stream=True, temperature=0.3)
+                                            stream=True, temperature=0.1)
     collected_messages = []
     for chunk in response:
         content = chunk["choices"][0].get(  # type: ignore
@@ -40,6 +40,11 @@ def gen(system_msg, user_msg, show = True, model='openai/gpt-3.5-turbo-instruct'
 gen_g4 = functools.partial(gen,model='openai/gpt-4')
 gen_g35 = functools.partial(gen,model='openai/gpt-3.5-turbo-instruct')
 gen_c2 = functools.partial(gen,model='anthropic/claude-2')
+gen_c1 = functools.partial(gen,model='anthropic/claude-instant-v1')
+gen_p2 = functools.partial(gen,model='google/palm-2-chat-bison')
+gen_l70 = functools.partial(gen,model='meta-llama/llama-2-70b-chat')
+gen_m7 = functools.partial(gen,model='mistralai/mistral-7b-instruct')
+gen_s70 = functools.partial(gen,model='migtissera/synthia-70b')
 
 
 
